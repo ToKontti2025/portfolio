@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tommi Konttila – Portfolio</title>
+  <meta name="description" content="Oma portfolio: projektit, osaaminen ja yhteystiedot." />
+
+  <!-- security: only allow stuff from this site -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self';
+                 style-src 'self';
+                 img-src 'self' data:;
+                 connect-src 'self';
+                 font-src 'self';
+                 object-src 'none';
+                 base-uri 'self';
+                 frame-ancestors 'none';
+                 upgrade-insecure-requests">
+
+  <!-- no referrer leaks -->
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <!-- support dark/light themes -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- open graph for social share -->
+  <meta property="og:title" content="Tommi Konttila – Portfolio">
+  <meta property="og:description" content="Projektit, osaaminen, yhteys.">
+  <meta property="og:type" content="website">
+
+  <!-- favicon + css -->
+  <link rel="icon" href="/assets/img/favicon.png" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">siirry sisältöön</a>
+
+  <!-- top nav -->
+  <header class="site-header" role="banner">
+    <nav aria-label="päävalikko">
+      <a class="brand" href="/">TK</a>
+      <ul class="nav">
+        <li><a href="#about">Minusta</a></li>
+        <li><a href="#skills">Osaaminen</a></li>
+        <li><a href="#projects">Projektit</a></li>
+        <li><a href="#contact">Yhteys</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main sections -->
+  <main id="content" class="container" role="main">
+    <section id="about" class="card">
+      <h1>Hei, olen Tommi</h1>
+      <p>ICT-asiantuntija ja opiskelija...</p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Osaaminen</h2>
+      <ul class="tags">
+        <li>C#, .NET</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projektit</h2>
+      <ul class="projects">
+        <li>
+          <article>
+            <h3><a href="https://github.com/USER/REPO" rel="noopener">RavintolaReviewApp</a></h3>
+            <p>short desc about project...</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Yhteys</h2>
+      <p>Sähköposti: <a href="mailto:tommi@example.com">tommi@example.com</a></p>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer" role="contentinfo">
+    <small>© <span id="year"></span> Tommi Konttila</small>
+  </footer>
+
+  <!-- load js file (no inline js) -->
+  <script type="module" src="/js/main.js" defer></script>
+</body>
+</html>
