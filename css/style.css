@@ -1,4 +1,4 @@
-/* reset stuff */
+/* reset basics */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
@@ -6,26 +6,30 @@ html, body { margin: 0; padding: 0; }
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
-  color: #0f172a;
-  background: #f8fafc;
+  color: #0f172a;      /* dark text */
+  background: #f8fafc; /* light bg */
 }
 
-/* dark mode */
+/* dark mode body */
 @media (prefers-color-scheme: dark) {
   body { color: #e2e8f0; background: #0b1020; }
 }
 
-/* layout */
-.container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+/* page layout */
+.container { 
+  max-width: 960px; 
+  margin: 2rem auto; 
+  padding: 0 1rem; 
+}
 
-/* header + footer */
+/* header + footer bar */
 .site-header, .site-footer {
   padding: 1rem; 
   background: #0f172a; 
   color: #e2e8f0;
 }
 
-/* nav links */
+/* nav list */
 .nav { 
   list-style: none; 
   display: flex; 
@@ -34,24 +38,25 @@ body {
   margin: 0; 
 }
 
+/* nav links */
 .site-header .nav a {
-  color: #ffffff;         
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .site-header .nav a:hover {
-  color: #38bdf8;             
+  color: #38bdf8; /* light blue hover */
 }
 
-/* active link */
+/* nav active link */
 .site-header .nav a.active {
-  color: #facc15;            
-  border-bottom: 2px solid #facc15;
+  color: #9ca3af; /* gray text */
+  border-bottom: 2px solid #9ca3af;
 }
 
-/* cards for sections */
+/* section cards */
 .card {
   background: white;
   border-radius: 16px;
@@ -60,7 +65,25 @@ body {
   box-shadow: 0 6px 24px rgba(2, 6, 23, 0.07);
 }
 
-/* dark cards */
+/* dark mode cards */
 @media (prefers-color-scheme: dark) {
   .card { background: #11162a; border: 1px solid #1e293b; }
+}
+
+/* smooth scroll + offset so header wont cover */
+html { scroll-behavior: smooth; }
+main section { scroll-margin-top: calc(var(--header-h, 0px) + 16px); }
+
+/* active card when nav clicked */
+.card.active {
+  background: #e5e7eb !important; /* light gray bg */
+  border: 2px solid #9ca3af;
+}
+
+/* dark mode active card */
+@media (prefers-color-scheme: dark) {
+  .card.active {
+    background: #374151 !important; /* darker gray bg */
+    border-color: #9ca3af;
+  }
 }
