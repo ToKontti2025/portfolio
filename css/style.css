@@ -20,11 +20,36 @@ body {
 
 /* header + footer */
 .site-header, .site-footer {
-  padding: 1rem; background: #0f172a; color: #e2e8f0;
+  padding: 1rem; 
+  background: #0f172a; 
+  color: #e2e8f0;
 }
 
 /* nav links */
-.nav { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0; }
+.nav { 
+  list-style: none; 
+  display: flex; 
+  gap: 1rem; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.site-header .nav a {
+  color: #ffffff;         
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.site-header .nav a:hover {
+  color: #38bdf8;             
+}
+
+/* active link */
+.site-header .nav a.active {
+  color: #facc15;            
+  border-bottom: 2px solid #facc15;
+}
 
 /* cards for sections */
 .card {
